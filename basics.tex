@@ -1,0 +1,99 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[unicode,colorlinks=true]{hyperref}
+\usepackage[czech]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\textwidth 16cm \textheight 24.6cm
+\topmargin -1.3cm
+\oddsidemargin 0cm
+
+\pagestyle{plain}
+\setcounter{page}{1}
+\pagenumbering{arabic}
+
+\begin{document}
+\title{Základy MB204}
+\author{Jan Horáček; me@apophis.cz}
+\maketitle
+
+\begin{enumerate}
+	\item \textbf{Počet prvočísel}\\
+		$\pi(x)$ udává počet prvočísel menších nebo rovných číslu $x \in \mathbb{R}$. \\
+		\[ \pi(x) \sim \frac{x}{\ln{x}} \]
+
+%	\item Möbiova funkce.\\
+%		Rozložme přirozené číslo $n$ na prvočísla: $n = p_1^{\alpha_1} \cdots p_k^{\alpha_k}$.
+%		Hodnotu Möbiovy funkce $\mu(n)$ definujeme rovnu $0$, pokud pro nekteré
+%		$i$ platí $\alpha_i > 1$ a rovnu $(-1)^k$ v~opačném případě. Dále definujeme
+%		$\mu(1) = 1$.
+
+	\item \textbf{Eulerova funkce}
+		\[ \varphi(n) = |\{ a \in \mathbb{N} \mid 0 < a \le n, (a,n) = 1\}| \]
+		Eulerova funkce v~bodě $n$ je počet přirozených čísel v~intervalu
+		$\langle 1..n \rangle$, která jsou s~číslem~$n$ nesoudělná.
+
+		$\varphi(1) = 1$, $\varphi(5) = 4$, $\varphi(6) = 2$, $\varphi(p) = p-1$.
+
+		\[ \varphi(n) = n \cdot \left( 1 - \frac{1}{p_1} \right) \cdot
+			\left( 1 - \frac{1}{p_2} \right) \cdots \left( 1 - \frac{1}{p_k} \right) \]
+
+		Funkce $\varphi$ je multiplikativní:
+		\[ \varphi(a \cdot b) = \varphi(a) \cdot \varphi(b). \]
+		\[ \varphi(p^\alpha) = p^\alpha - p^{\alpha-1} = (p - 1) \cdot p^{\alpha-1}\]
+		\[ \varphi(p_1^{\alpha_1} \cdots p_k^{\alpha_k}) = (p_1 - 1) \cdot
+			p_1^{\alpha_1-1} \cdots (p_k - 1) \cdot p_k^{\alpha_k-1} \]
+
+	\item \textbf{Malá Fermatova věta}\\
+		Nechť $a \in \mathbb{Z}$, $p$ je prvočíslo a $p \nmid a$. Pak
+		\[ a^{p-1} \equiv 1 \pmod{p} \]
+		Věta poskytuje částečnou podmínku prvočíselnosti.
+
+	\item \textbf{Eulerova věta}\\
+		Nechť $a \in \mathbb{Z}$, $m \in \mathbb{N}$ a $(a,m) = 1$. Pak
+		\[ a^{\varphi(m)} \equiv 1 \pmod{m} \]
+		Je zobecněním Fermatovy věty.
+
+	\item \textbf{Řád čísla modulo $m$}\\
+		Nechť $a \in \mathbb{Z}$, $m \in \mathbb{N}$ a $(a,m) = 1$. Řádem čísla
+		\textit{a modulo m} rozumíme nejmenší přirozené číslo $n$ splňující:
+		\[ a^n \equiv 1 \pmod{m} \]
+
+	\item \textbf{Primitivní kořen}\\
+		Nechť $m \in \mathbb{N}$. Celé číslo $g \in \mathbb{Z}$, $(g,m) = 1$
+		nezveme \textit{primitivním kořenem modulo m}, pokud je jeho řád modulo
+		$m$ roven $\varphi(m)$.
+
+		Pro lichá prvočísla existují primitivní kořeny.
+
+		Umocňováním primitivního kořene modulo $p$ dostaneme všechny prvky
+		redukované soustavy zbytků modulo $k$.
+
+	\item \textbf{Wilsonova věta}\\
+		Udává nutnou i postačující podmínku prvočíselnosti.
+
+		Přirozené číslo $n > 1$ je prvočíslo, právě když
+		\[ (n-1)! \equiv -1 \pmod{n}. \]
+		Bohužel dosud není známo, jak rychle počítat modulární faktoriál velkých
+		čísel.
+
+	\item \textbf{Čínská zbytková věta}\\
+		Nechť $m_1, \ldots, m_k \in \mathbb{N}$ jsou po dvou nesoudělná a
+		$a_1, \ldots, a_k \in \mathbb{Z}$.
+
+		Pak soustava
+		\begin{align*}
+			x &\equiv a_1 \pmod{m_1}\\
+			&\vdots\\
+			x &\equiv a_k \pmod{m_k}
+		\end{align*}
+
+		má jediné řešení modulo $m_1 \cdot m_2 \cdots m_k$.
+
+\end{enumerate}
+
+\end{document}
