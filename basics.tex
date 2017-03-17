@@ -96,6 +96,28 @@
 
 		má jediné řešení modulo $m_1 \cdot m_2 \cdots m_k$.
 
+	\item \textbf{Binomické kongruence}
+		\[ x^n -a \equiv 0 \pmod{m} \]
+
+	\begin{enumerate}
+		\item \textbf{Mocninné zbytky}\\
+			Nechť $m \in \mathbb{N}$, $a \in \mathbb{Z}$, $(a,m) = 1$. Číslo $a$
+			nazveme \textit{n-tým mocninným zbytkem modulo m}, pokud je kongruence
+			\[ x^n \equiv a \pmod{m} \]
+			řešitelná. V opačném případě nazveme $a$ \textit{n-tým mocninným
+			nezbytkem modulo m}.
+
+		\item \textbf{Existence řešení binomických kongruencí}\\
+			Buď $m \in \mathbb{N}$ takové, že modulo $m$ existují primitivní
+			kořeny.  Dále nechť $a \in \mathbb{Z}$, $(a,m) = 1$. Pak kongruence
+			$x^n \equiv a \pmod{m}$ je řešitelná (tj. $a$ je n-tý mocninný
+			zbytek modulo $m$), právě když
+			\[ a^{\varphi(m)/d} \equiv q \pmod{m} \]
+			kde $d = (n, \varphi(m))$ je počet řešení.
+	\end{enumerate}
+
+%	\item \textbf{Polynomiální kongruence}\\
+
 \end{enumerate}
 
 \end{document}
