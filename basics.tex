@@ -116,7 +116,52 @@
 			kde $d = (n, \varphi(m))$ je počet řešení.
 	\end{enumerate}
 
-%	\item \textbf{Polynomiální kongruence}\\
+	\item \textbf{Polynomiální kongruence}
+	\begin{enumerate}
+		\item \textbf{Henselovo lemma}\\
+			udává postup pro řešení kongruencí modulo mocnina
+			prvočísla.
+
+			Nechť $p$ je prvočíslo, $f(x) \in \mathbb{Z}[x]$, $a \in
+			\mathbb{Z}$ je takové, že $p \mid f(a)$, $p \nmid f'(a)$. Pak
+			platí: pro každé $n \in \mathbb{N}$ má soustava
+			\begin{align*}
+				x &\equiv a \pmod{p}\\
+				f(x) &\equiv 0 \pmod{p^n}
+			\end{align*}
+			právě jedno řešení modulo $p^n$. Viz příklad 4/10.
+
+		\item \textbf{Řešitelnost kvadratických kongruencí}\\
+			Podmínka řešitelnosti kongruence
+			\[ ax^2 + bc + c \equiv 0 \pmod{m} \]
+			je ekvivalentní podmínce řešitelnosti binomické kongruence
+			\[ x^2 \equiv a \pmod{p}. \]
+
+		\item \textbf{Legendreův symbol}\\
+			Nechť $p$ je liché prvočíslo.
+
+			\[ \genfrac(){}{0}{a}{b} = \left\{
+				\begin{array}{ll}
+					1 & p \nmid a, a \text{ je kvadratický zbytek modulo } p \\
+					0 & p \mid a \\
+					-1& p \nmid a, a \text{ je kvadratický nezbytek modulo } p
+				\end{array}
+			\right. \]
+
+			Nechť $p$ je liché prvočíslo a $a, b \in \mathbb{Z}$ jsou libovolná.
+			Pak platí:
+
+			\begin{enumerate}
+				\item $\genfrac(){}{0}{a}{p} \equiv  a^{\frac{p-1}{2}} \pmod{p},$
+				\item $\genfrac(){}{0}{ab}{p} = \genfrac(){}{0}{a}{p} \cdot
+					\genfrac(){}{0}{b}{p},$
+				\item $a \equiv b \pmod{p} \Rightarrow \genfrac(){}{0}{a}{p}
+					= \genfrac(){}{0}{b}{p}.$
+			\end{enumerate}
+
+		\item \textbf{Jacobiho symbol}
+
+	\end{enumerate}
 
 \end{enumerate}
 
