@@ -152,14 +152,25 @@
 			Pak platí:
 
 			\begin{enumerate}
-				\item $\genfrac(){}{0}{a}{p} \equiv  a^{\frac{p-1}{2}} \pmod{p},$
-				\item $\genfrac(){}{0}{ab}{p} = \genfrac(){}{0}{a}{p} \cdot
-					\genfrac(){}{0}{b}{p},$
-				\item $a \equiv b \pmod{p} \Rightarrow \genfrac(){}{0}{a}{p}
-					= \genfrac(){}{0}{b}{p}.$
+				\item $\genfrac(){}{1}{a}{p} \equiv  a^{\frac{p-1}{2}} \pmod{p},$
+				\item $\genfrac(){}{1}{ab}{p} = \genfrac(){}{1}{a}{p} \cdot
+					\genfrac(){}{1}{b}{p},$
+				\item $a \equiv b \pmod{p} \Rightarrow \genfrac(){}{1}{a}{p}
+					= \genfrac(){}{1}{b}{p}.$
 			\end{enumerate}
 
-		\item \textbf{Jacobiho symbol}
+		\item \textbf{Jacobiho symbol}\\
+			Nevýhoda Legendreova symbolu tkví v tom, že je definován jen pro
+			lichá prvočísla. Tento problém řešíme zavedením \textit{Jacobiho
+			symbolu}.
+
+			Nechť $a \in \mathbb{Z}$, $b \in \mathbb{N}$, $2 \nmid b$. Nechť
+			$b = p_1 \cdot p_2 \cdots p_k$ je rozklad čísla $b$ na (lichá)
+			prvočísla (neskupujeme stejná prvočísla do mocniny!). Symbol
+			\[ \genfrac(){}{0}{a}{b} = \genfrac(){}{0}{a}{p_1} \cdot
+				\genfrac(){}{0}{a}{p_2} \cdots \genfrac(){}{0}{a}{p_k} \]
+
+			se nazývá \textit{Jacobiho symbol}.
 
 	\end{enumerate}
 
