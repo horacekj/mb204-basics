@@ -18,7 +18,7 @@
 \pagenumbering{arabic}
 
 \begin{document}
-\title{\vspace{-1.5cm}Základy MB204}
+\title{\vspace{-1.5cm}Základy teorie čísel}
 \author{Jan Horáček; me@apophis.cz}
 \maketitle
 
@@ -224,6 +224,27 @@
 			počet záporných prvků $s$ v~předchozím výrazu.
 
 	\end{enumerate}
+
+	\item \textbf{Testy složenosti}\\
+		Pokud je číslo $x$ složené, test na složenost to s jistotou pozná, pokud
+		však $x$ není složené (je to prvočíslo), z~výsledku testu nelze činit
+		závěry.
+
+		Testy testují některou z~\textit{nutných podmínek prvočíselnosti}:
+		\textit{je-li $x$ prvočíslo, pak platí věta $v$} $\Leftrightarrow$
+		\textit{neplatí-li věta $v$, $x$ je složené}. Pokud $v$ platí,
+		o~složenosti nic dalšího nevíme.
+
+		\begin{enumerate}
+			\item \textbf{Fermatův test}\\
+				Existuje-li pro dané $N$ nějaké $a \not \equiv 0 \pmod{N}$
+				takové, že $a^{N-1} \not \equiv 1 \pmod{N}$, pak $N$ je
+				složené.
+
+				Bohužel, hledání $a$ je mnohdy náročné, takže i~odhalení
+				samotné složenosti může být náročné (viz
+				\textit{Carmichaelova čísla}).
+		\end{enumerate}
 
 \end{enumerate}
 
